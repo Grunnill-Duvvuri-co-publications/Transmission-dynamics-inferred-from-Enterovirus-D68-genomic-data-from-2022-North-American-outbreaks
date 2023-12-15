@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Author: Martin Grunnill
+# @Date:   2023-12-15 12:56:21
+# @Last Modified by:   Martin Grunnill
+# @Last Modified time: 2023-12-15 15:28:51
 """
 Date Created: April 25th 2023
 Author: Martin Grunnill 
@@ -25,7 +30,6 @@ def write_seq_dict_to_file(sequence_dict, file_name):
         for id, sequence in sequence_dict.items():
             output_file.write('>'+id + "\n" + sequence + "\n")
 
-
 def fasta_to_dict(input_file, delimiter='|'):
     sequence_dict = OrderedDict()
     # Using the Biopython fasta parse we can read our fasta input
@@ -38,6 +42,33 @@ def fasta_to_dict(input_file, delimiter='|'):
     
     return sequence_dict
 
+
+def fasta_to_Bankit_format(input_file, output_file, metadata):
+    """Convert fasta file to Bankit format.
+
+    See following for Bankit format guidelines:
+        https://www.ncbi.nlm.nih.gov/WebSub/html/help/fasta.html and
+        https://www.ncbi.nlm.nih.gov/WebSub/html/help/genbank-source-table.html#modifiers
+
+
+    Parameters
+    ----------
+    input_file : str
+        Path to input file.
+    output_file : str
+        Path to wrtie output file to.
+    metadata : pandas.DataFrame
+        Sequence tag must correspond to index of dataframe. To set index use metadata.set_index('ID',inplace=True).
+    """
+    seq_dict = fasta_to_dict(input_file)
+    conv_seq_dict = {}
+    for count, (tag, seq) in enumerate(seq_dict.items(),1):
+        metadata_entry = metadata.loc[tag].to_dict()
+        metadata_entry = ['['+column+'='+row+']' for column, row in metadata_entry.items()]
+        metadata_entry = ' '.join(metadata_entry)
+        conv_seq_dict['Seq'+str(count)+' '+metadata_entry] = seq
+    
+    write_seq_dict_to_file(conv_seq_dict, output_file)
 
 def seq_clean(input_file, output_file, accept = 'iupac_codes', replacement='n'):
     """Convert unacceptable characters from sequences in fasta file entries to a replacement character.
@@ -60,12 +91,15 @@ def seq_clean(input_file, output_file, accept = 'iupac_codes', replacement='n'):
     """
     nucleotides = 'g,c,a,t,u'
     iupac_codes = nucleotides + 'r,y,m,k,s,w,h,b,v,d,n,-'
+    iupac_without_alignment =  nucleotides + 'r,y,m,k,s,w,h,b,v,d,n'
     if accept == 'nucleotides':
         accepted = nucleotides
     elif accept == 'iupac_codes':
         accepted = iupac_codes
+    elif accept == 'iupac_without_alignment':
+        accept = iupac_without_alignment
     else:
-        raise AssertionError('Argument accept only takes the values of "nucleotides" or "iupac_codes"')
+        raise AssertionError('Argument accept only takes the values of "nucleotides", "iupac_codes" or "iupac_without_alignment"')
     accepted = '[^.' + accepted + ']'
     
     sequence_dict = OrderedDict()
