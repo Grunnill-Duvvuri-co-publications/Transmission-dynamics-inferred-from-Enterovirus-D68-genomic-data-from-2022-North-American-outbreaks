@@ -1,3 +1,37 @@
+# delete next 2 lines when Ontarian sequences published on NCBI.
+beast_xmls/ON-2022/ON-2022.xml
+sequences/ON_2022.fasta
+
+figures/
+ML_trees/
+data/
+sequences/MD_2022-delim.fasta.log
+sequences/MD_2022-delim.iqtree.log
+sequences/ON_2022-delim.fasta.log
+sequences/ON_2022-delim.iqtree.log
+
+
+beast_xmls/ON-2022/run_1/
+beast_xmls/ON-2022/run_2/
+beast_xmls/ON-2022/run_3/
+beast_xmls/ON-2022/run_4/
+beast_xmls/ON-2022/run_5/
+beast_xmls/ON-2022/run_6/
+beast_xmls/ON-2022/ON_combined_run_1_3_4.log
+beast_xmls/ON-2022/ON_combined_run_1_3_4.trees
+
+beast_xmls/MD-2022/run_1/
+beast_xmls/MD-2022/run_2/
+beast_xmls/MD-2022/run_3/
+beast_xmls/MD-2022/run_4/
+beast_xmls/MD-2022/run_5/
+beast_xmls/MD-2022/run_6/
+beast_xmls/MD-2022/MD_combined_run_4to6.log/
+beast_xmls/MD-2022/MD_combined_run_4to6.trees
+
+
+
+##### Template from GitHub ####
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

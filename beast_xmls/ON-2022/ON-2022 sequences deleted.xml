@@ -1,0 +1,258 @@
+<!-- 
+  @Author: Martin Grunnill
+  @Date:   2023-12-14 19:24:07
+  @Last Modified by:   Martin Grunnill
+  @Last Modified time: 2023-12-14 19:25:01
+-->
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='Standard' beautistatus='' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.base.evolution.alignment:beast.pkgmgmt:beast.base.core:beast.base.inference:beast.base.evolution.tree.coalescent:beast.pkgmgmt:beast.base.core:beast.base.inference.util:beast.evolution.nuc:beast.base.evolution.operator:beast.base.inference.operator:beast.base.evolution.sitemodel:beast.base.evolution.substitutionmodel:beast.base.evolution.likelihood" required="BEAST.base v2.7.5:BDSKY v1.5.0:ORC v1.1.2:BEASTLabs v2.0.2" version="2.7">
+
+    <data
+id="26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"
+spec="Alignment"
+name="alignment">    </data>
+
+    <map name="Uniform" >beast.base.inference.distribution.Uniform</map>
+
+    <map name="Exponential" >beast.base.inference.distribution.Exponential</map>
+
+    <map name="LogNormal" >beast.base.inference.distribution.LogNormalDistributionModel</map>
+
+    <map name="Normal" >beast.base.inference.distribution.Normal</map>
+
+    <map name="Beta" >beast.base.inference.distribution.Beta</map>
+
+    <map name="Gamma" >beast.base.inference.distribution.Gamma</map>
+
+    <map name="LaplaceDistribution" >beast.base.inference.distribution.LaplaceDistribution</map>
+
+    <map name="prior" >beast.base.inference.distribution.Prior</map>
+
+    <map name="InverseGamma" >beast.base.inference.distribution.InverseGamma</map>
+
+    <map name="OneOnX" >beast.base.inference.distribution.OneOnX</map>
+
+    <run id="mcmc" spec="MCMC" chainLength="50000000">
+        <state id="state" spec="State" storeEvery="5000">
+            <tree id="Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="beast.base.evolution.tree.Tree" name="stateNode">
+                <trait id="dateTrait.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="beast.base.evolution.tree.TraitSet" traitname="date" value="PHL0001=2022.7084474885844,PHL0093=2022.733105022831,PHL0009=2022.697488584475,PHL0068=2022.7385844748858,PHL0005=2022.6646118721462,PHL0080=2022.7276255707764,PHL0032=2022.719406392694,PHL0035=2022.7276255707764,PHL0037=2022.7413242009131,PHL0052=2022.7358447488584,PHL0091=2022.7632420091325,PHL0058=2022.7385844748858,PHL0017=2022.705707762557,PHL0028=2022.7221461187214,PHL0054=2022.746803652968,PHL0044=2022.7248858447488,PHL0024=2022.7550228310502,PHL0021=2022.7084474885844,PHL0083=2022.7084474885844,PHL0090=2022.7413242009131,PHL0087=2022.7303652968037,PHL0002=2022.697488584475,PHL0060=2022.7440639269407,PHL0076=2022.7550228310502,PHL0086=2022.697488584475,PHL0082=2022.719406392694,PHL0064=2022.7358447488584,PHL0010=2022.670091324201,PHL0012=2022.705707762557,PHL0034=2022.746803652968,PHL0013=2022.705707762557,PHL0016=2022.7084474885844,PHL0074=2022.6947488584474,PHL0043=2022.7139269406393,PHL0020=2022.697488584475,PHL0069=2022.683789954338,PHL0046=2022.7577625570775,PHL0048=2022.7550228310502,PHL0057=2022.7276255707764,PHL0096=2022.746803652968,PHL0073=2022.719406392694,PHL0097=2022.7139269406393,PHL0070=2022.7385844748858,PHL0041=2022.7276255707764,PHL0029=2022.7550228310502,PHL0095=2022.7358447488584,PHL0061=2022.7303652968037,PHL0022=2022.719406392694,PHL0059=2022.7440639269407,PHL0062=2022.7385844748858,PHL0078=2022.711187214612,PHL0085=2022.733105022831,PHL0063=2022.7358447488584,PHL0081=2022.7248858447488,PHL0030=2022.705707762557,PHL0011=2022.705707762557,PHL0084=2022.746803652968,PHL0003=2022.6810502283106,PHL0004=2022.683789954338,PHL0042=2022.683789954338,PHL0039=2022.733105022831,PHL0072=2022.7577625570775,PHL0007=2022.6673515981736,PHL0094=2022.7221461187214,PHL0018=2022.6865296803653,PHL0006=2022.7166666666667,PHL0031=2022.7084474885844,PHL0088=2022.7413242009131,PHL0033=2022.7303652968037,PHL0092=2022.7166666666667,PHL0077=2022.7632420091325,PHL0047=2022.7248858447488,PHL0079=2022.683789954338,PHL0065=2022.746803652968,PHL0014=2022.711187214612,PHL0098=2022.746803652968,PHL0053=2022.7385844748858,PHL0023=2022.746803652968,PHL0038=2022.7276255707764,PHL0015=2022.711187214612,PHL0089=2022.7303652968037,PHL0056=2022.7440639269407,PHL0050=2022.7358447488584,PHL0049=2022.7577625570775,PHL0036=2022.719406392694,PHL0055=2022.7632420091325,PHL0008=2022.697488584475">
+                    <taxa id="TaxonSet.26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="TaxonSet">
+                        <alignment idref="26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+                    </taxa>
+                </trait>
+                <taxonset idref="TaxonSet.26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            </tree>
+            <parameter id="gammaShape.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="parameter.RealParameter" lower="0.1" name="stateNode">1.0</parameter>
+            <parameter id="kappa.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="parameter.RealParameter" lower="0.0" name="stateNode">2.0</parameter>
+            <parameter id="freqParameter.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="parameter.RealParameter" dimension="4" lower="0.0" name="stateNode" upper="1.0">0.25</parameter>
+            <parameter id="ORCucldMean.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="parameter.RealParameter" name="stateNode">0.003</parameter>
+            <parameter id="ORCsigma.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="parameter.RealParameter" lower="0.0" name="stateNode">0.2</parameter>
+            <parameter id="ORCRates.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="parameter.RealParameter" dimension="172" lower="1.0E-100" name="stateNode">0.5</parameter>
+            <parameter id="origin_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="Infinity">5.0</parameter>
+            <parameter id="becomeUninfectiousRate_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="365.0">52.0</parameter>
+            <parameter id="reproductiveNumber_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="parameter.RealParameter" dimension="10" lower="0.0" name="stateNode" upper="Infinity">2.0</parameter>
+            <parameter id="samplingProportion_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="1.0">0.01</parameter>
+        </state>
+        <init id="RandomTree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="RandomTree" estimate="false" initial="@Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" taxa="@26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO">
+            <populationModel id="ConstantPopulation0.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="ConstantPopulation">
+                <parameter id="randomPopSize.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="parameter.RealParameter" name="popSize">1.0</parameter>
+            </populationModel>
+        </init>
+        <distribution id="posterior" spec="CompoundDistribution">
+            <distribution id="prior" spec="CompoundDistribution">
+                <distribution id="BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="bdsky.evolution.speciation.BirthDeathSkylineModel" becomeUninfectiousRate="@becomeUninfectiousRate_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" origin="@origin_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" reproductiveNumber="@reproductiveNumber_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" samplingProportion="@samplingProportion_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" tree="@Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+                <prior id="ORCRatePriorDistribution.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" name="distribution" x="@ORCRates.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO">
+                    <LogNormal id="LogNormalDistributionModel.1" S="@ORCsigma.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" meanInRealSpace="true" name="distr">
+                        <parameter id="RealParameter.5" spec="parameter.RealParameter" estimate="false" name="M">1.0</parameter>
+                    </LogNormal>
+                </prior>
+                <prior id="ORCsigmaPrior.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" name="distribution" x="@ORCsigma.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO">
+                    <Gamma id="Gamma.10" name="distr">
+                        <parameter id="RealParameter.86" spec="parameter.RealParameter" estimate="false" name="alpha">5.0</parameter>
+                        <parameter id="RealParameter.87" spec="parameter.RealParameter" estimate="false" name="beta">0.05</parameter>
+                    </Gamma>
+                </prior>
+                <prior id="ORCucldMeanPrior.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" name="distribution" x="@ORCucldMean.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO">
+                    <LogNormal id="LogNormalDistributionModel.2" meanInRealSpace="true" name="distr">
+                        <parameter id="RealParameter.8" spec="parameter.RealParameter" estimate="false" name="M">0.003</parameter>
+                        <parameter id="RealParameter.9" spec="parameter.RealParameter" estimate="false" lower="0.0" name="S" upper="5.0">1.0</parameter>
+                    </LogNormal>
+                </prior>
+                <prior id="becomeUninfectiousRatePrior_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" name="distribution" x="@becomeUninfectiousRate_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO">
+                    <Gamma id="Gamma.2" name="distr">
+                        <parameter id="RealParameter.18" spec="parameter.RealParameter" estimate="false" name="alpha">12.01777778</parameter>
+                        <parameter id="RealParameter.19" spec="parameter.RealParameter" estimate="false" name="beta">4.326923076923077</parameter>
+                    </Gamma>
+                </prior>
+                <prior id="FrequenciesPrior.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" name="distribution" x="@freqParameter.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO">
+                    <distr id="Dirichlet.0" spec="distribution.Dirichlet">
+                        <parameter id="RealParameter.3" spec="parameter.RealParameter" dimension="4" estimate="false" name="alpha">4.0 4.0 4.0 4.0</parameter>
+                    </distr>
+                </prior>
+                <prior id="GammaShapePrior.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" name="distribution" x="@gammaShape.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO">
+                    <LogNormal id="LogNormalDistributionModel.5" name="distr">
+                        <parameter id="RealParameter.20" spec="parameter.RealParameter" estimate="false" name="M">1.0</parameter>
+                        <parameter id="RealParameter.21" spec="parameter.RealParameter" estimate="false" lower="0.0" name="S" upper="5.0">1.25</parameter>
+                    </LogNormal>
+                </prior>
+                <prior id="KappaPrior.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" name="distribution" x="@kappa.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO">
+                    <LogNormal id="LogNormalDistributionModel.0" name="distr">
+                        <parameter id="RealParameter.1" spec="parameter.RealParameter" estimate="false" name="M">1.0</parameter>
+                        <parameter id="RealParameter.2" spec="parameter.RealParameter" estimate="false" name="S">1.25</parameter>
+                    </LogNormal>
+                </prior>
+                <prior id="originPrior_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" name="distribution" x="@origin_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO">
+                    <Uniform id="Uniform.3" name="distr" upper="20.0"/>
+                </prior>
+                <prior id="reproductiveNumberPrior_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" name="distribution" x="@reproductiveNumber_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO">
+                    <LogNormal id="LogNormalDistributionModel.4" name="distr">
+                        <parameter id="RealParameter.14" spec="parameter.RealParameter" estimate="false" name="M">0.0</parameter>
+                        <parameter id="RealParameter.15" spec="parameter.RealParameter" estimate="false" name="S">1.0</parameter>
+                    </LogNormal>
+                </prior>
+                <prior id="samplingProportionPrior_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" name="distribution" x="@samplingProportion_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO">
+                    <Beta id="Beta.1" name="distr">
+                        <parameter id="RealParameter.16" spec="parameter.RealParameter" estimate="false" name="alpha">1.0</parameter>
+                        <parameter id="RealParameter.17" spec="parameter.RealParameter" estimate="false" name="beta">9999.0</parameter>
+                    </Beta>
+                </prior>
+            </distribution>
+            <distribution id="likelihood" spec="CompoundDistribution" useThreads="true">
+                <distribution id="treeLikelihood.26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="ThreadedTreeLikelihood" data="@26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" tree="@Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO">
+                    <siteModel id="SiteModel.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="SiteModel" gammaCategoryCount="4" shape="@gammaShape.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO">
+                        <parameter id="mutationRate.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="parameter.RealParameter" estimate="false" lower="0.0" name="mutationRate">1.0</parameter>
+                        <parameter id="proportionInvariant.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
+                        <substModel id="hky.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="HKY" kappa="@kappa.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO">
+                            <frequencies id="estimatedFreqs.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="Frequencies" frequencies="@freqParameter.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+                        </substModel>
+                    </siteModel>
+                    <branchRateModel id="OptimisedRelaxedClock.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="beast.base.evolution.branchratemodel.UCRelaxedClockModel" clock.rate="@ORCucldMean.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" rates="@ORCRates.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" tree="@Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO">
+                        <LogNormal id="ORCLogNormalDistributionModel.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" S="@ORCsigma.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" meanInRealSpace="true" name="distr">
+                            <parameter id="RealParameter.4" spec="parameter.RealParameter" estimate="false" name="M">1.0</parameter>
+                        </LogNormal>
+                    </branchRateModel>
+                </distribution>
+            </distribution>
+        </distribution>
+        <operator id="gammaShapeScaler.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="AdaptableOperatorSampler" weight="0.05">
+            <parameter idref="gammaShape.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <operator id="AVMNOperator.26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="kernel.AdaptableVarianceMultivariateNormalOperator" allowNonsense="true" beta="0.05" burnin="400" initial="800" weight="0.1">
+                <transformations id="AVMNSumTransform.26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="operator.kernel.Transform$LogConstrainedSumTransform">
+                    <f idref="freqParameter.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+                </transformations>
+                <transformations id="AVMNLogTransform.26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="operator.kernel.Transform$LogTransform">
+                    <f idref="gammaShape.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+                    <f idref="kappa.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+                </transformations>
+                <transformations id="AVMNNoTransform.26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="operator.kernel.Transform$NoTransform">
+                    <f idref="Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+                </transformations>
+            </operator>
+            <operator id="gammaShapeScalerX.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="kernel.BactrianScaleOperator" parameter="@gammaShape.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+        </operator>
+        <operator id="KappaScaler.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="AdaptableOperatorSampler" weight="0.05">
+            <parameter idref="kappa.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <operator idref="AVMNOperator.26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <operator id="KappaScalerX.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="kernel.BactrianScaleOperator" parameter="@kappa.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" scaleFactor="0.1" upper="10.0" weight="0.1"/>
+        </operator>
+        <operator id="FrequenciesExchanger.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="AdaptableOperatorSampler" weight="0.05">
+            <parameter idref="freqParameter.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <operator idref="AVMNOperator.26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <operator id="FrequenciesExchangerX.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="operator.kernel.BactrianDeltaExchangeOperator" delta="0.01" weight="0.1">
+                <parameter idref="freqParameter.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            </operator>
+        </operator>
+        <operator id="ORCucldMeanScaler.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="ScaleOperator" parameter="@ORCucldMean.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" scaleFactor="0.5" weight="3.0"/>
+        <operator id="ORC.UpDown.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="operator.kernel.BactrianUpDownOperator" scaleFactor="0.75" weight="3.0">
+            <up idref="ORCucldMean.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <down idref="Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+        </operator>
+        <operator id="ORCAdaptableOperatorSampler_sigma.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="AdaptableOperatorSampler" weight="3.0">
+            <parameter idref="ORCsigma.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <operator id="ORCucldStdevScaler.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="orc.consoperators.UcldScalerOperator" distr="@ORCLogNormalDistributionModel.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" rates="@ORCRates.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" scaleFactor="0.5" stdev="@ORCsigma.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" weight="1.0">
+                <kernel id="KernelDistribution$Bactrian.17" spec="operator.kernel.KernelDistribution$Bactrian"/>
+            </operator>
+            <operator id="ORCUcldStdevRandomWalk.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="operator.kernel.BactrianRandomWalkOperator" parameter="@ORCsigma.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" scaleFactor="0.1" weight="1.0">
+                <kernelDistribution id="KernelDistribution$Bactrian.18" spec="operator.kernel.KernelDistribution$Bactrian"/>
+            </operator>
+            <operator id="ORCUcldStdevScale.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="kernel.BactrianScaleOperator" parameter="@ORCsigma.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" scaleFactor="0.5" upper="10.0" weight="1.0">
+                <kernelDistribution id="KernelDistribution$Bactrian.19" spec="operator.kernel.KernelDistribution$Bactrian"/>
+            </operator>
+            <operator id="ORCSampleFromPriorOperator_sigma.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="orc.operators.SampleFromPriorOperator" parameter="@ORCsigma.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" prior2="@ORCsigmaPrior.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" weight="1.0"/>
+        </operator>
+        <operator id="ORCAdaptableOperatorSampler_rates_root.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="AdaptableOperatorSampler" weight="1.0">
+            <parameter idref="ORCRates.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <tree idref="Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <operator id="ORCRootOperator1.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="orc.consoperators.SimpleDistance" clockModel="@OptimisedRelaxedClock.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" rates="@ORCRates.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" tree="@Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" twindowSize="0.005" weight="1.0">
+                <kernel id="KernelDistribution$Bactrian.20" spec="operator.kernel.KernelDistribution$Bactrian"/>
+            </operator>
+            <operator id="ORCRootOperator2.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="orc.consoperators.SmallPulley" clockModel="@OptimisedRelaxedClock.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" dwindowSize="0.005" rates="@ORCRates.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" tree="@Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" weight="1.0">
+                <kernel id="KernelDistribution$Bactrian.21" spec="operator.kernel.KernelDistribution$Bactrian"/>
+            </operator>
+        </operator>
+        <operator id="ORCAdaptableOperatorSampler_rates_internal.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="AdaptableOperatorSampler" weight="20.0">
+            <parameter idref="ORCRates.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <tree idref="Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <operator id="ORCInternalnodesOperator.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="orc.consoperators.InConstantDistanceOperator" clockModel="@OptimisedRelaxedClock.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" rates="@ORCRates.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" tree="@Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" twindowSize="0.005" weight="1.0">
+                <kernel id="KernelDistribution$Bactrian.22" spec="operator.kernel.KernelDistribution$Bactrian"/>
+            </operator>
+            <operator id="ORCRatesRandomWalk.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="operator.kernel.BactrianRandomWalkOperator" parameter="@ORCRates.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" scaleFactor="0.1" weight="1.0">
+                <kernelDistribution id="KernelDistribution$Bactrian.23" spec="operator.kernel.KernelDistribution$Bactrian"/>
+            </operator>
+            <operator id="ORCRatesScale.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="kernel.BactrianScaleOperator" parameter="@ORCRates.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" scaleFactor="0.5" upper="10.0" weight="1.0">
+                <kernelDistribution id="KernelDistribution$Bactrian.24" spec="operator.kernel.KernelDistribution$Bactrian"/>
+            </operator>
+            <operator id="ORCSampleFromPriorOperator.rates.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="orc.operators.SampleFromPriorOperator" parameter="@ORCRates.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" prior2="@ORCRatePriorDistribution.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" weight="1.0"/>
+        </operator>
+        <operator id="ORCAdaptableOperatorSampler_NER.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="AdaptableOperatorSampler" weight="15.0">
+            <tree idref="Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <operator id="ORCNER_null.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="Exchange" tree="@Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" weight="0.0"/>
+            <operator id="ORCNER_dAE_dBE_dCE.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="orc.ner.NEROperator_dAE_dBE_dCE" rates="@ORCRates.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" tree="@Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" weight="1.0"/>
+            <metric id="RNNIMetric.0" spec="beastlabs.evolution.tree.RNNIMetric" taxonset="@TaxonSet.26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+        </operator>
+        <operator id="BDSKY_SerialBICEPSEpochTop.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="EpochFlexOperator" scaleFactor="0.1" tree="@Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" weight="2.0"/>
+        <operator id="BDSKY_SerialBICEPSEpochAll.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="EpochFlexOperator" fromOldestTipOnly="false" scaleFactor="0.1" tree="@Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" weight="2.0"/>
+        <operator id="BDSKY_SerialBICEPSTreeFlex.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="TreeStretchOperator" scaleFactor="0.01" tree="@Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" weight="2.0"/>
+        <operator id="BDSKY_SerialTreeRootScaler.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="kernel.BactrianScaleOperator" rootOnly="true" scaleFactor="0.1" tree="@Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" upper="10.0" weight="3.0"/>
+        <operator id="BDSKY_SerialUniformOperator.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="kernel.BactrianNodeOperator" tree="@Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" weight="30.0"/>
+        <operator id="BDSKY_SerialSubtreeSlide.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="kernel.BactrianSubtreeSlide" tree="@Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" weight="15.0"/>
+        <operator id="BDSKY_SerialNarrow.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="Exchange" tree="@Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" weight="0.0"/>
+        <operator id="BDSKY_SerialWide.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="Exchange" isNarrow="false" tree="@Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" weight="3.0"/>
+        <operator id="BDSKY_SerialWilsonBalding.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="WilsonBalding" tree="@Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" weight="3.0"/>
+        <operator id="becomeUninfectiousRateScaler_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="ScaleOperator" parameter="@becomeUninfectiousRate_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" weight="2.0"/>
+        <operator id="reproductiveNumberScaler_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="ScaleOperator" parameter="@reproductiveNumber_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" weight="10.0"/>
+        <operator id="samplingProportionScaler_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="ScaleOperator" parameter="@samplingProportion_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" weight="10.0"/>
+        <operator id="updownBD_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="operator.UpDownOperator" scaleFactor="0.75" weight="2.0">
+            <up idref="reproductiveNumber_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <down idref="becomeUninfectiousRate_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+        </operator>
+        <operator id="origScaler_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="ScaleOperator" parameter="@origin_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" weight="1.0"/>
+        <logger id="tracelog" spec="Logger" fileName="$(filebase).log" logEvery="5000" model="@posterior" sanitiseHeaders="true" sort="smart">
+            <log idref="posterior"/>
+            <log idref="likelihood"/>
+            <log idref="prior"/>
+            <log idref="treeLikelihood.26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <log id="TreeHeight.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="beast.base.evolution.tree.TreeStatLogger" tree="@Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <log idref="gammaShape.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <log idref="kappa.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <log idref="freqParameter.s:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <log idref="ORCucldMean.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <log idref="ORCsigma.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <log id="ORCRatesStat.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="beast.base.evolution.RateStatistic" branchratemodel="@OptimisedRelaxedClock.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" tree="@Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <log idref="BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <log idref="origin_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <log idref="becomeUninfectiousRate_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <log idref="reproductiveNumber_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+            <log idref="samplingProportion_BDSKY_Serial.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+        </logger>
+        <logger id="screenlog" spec="Logger" logEvery="1000">
+            <log idref="posterior"/>
+            <log idref="likelihood"/>
+            <log idref="prior"/>
+        </logger>
+        <logger id="treelog.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="Logger" fileName="$(filebase)-$(tree).trees" logEvery="5000" mode="tree">
+            <log id="TreeWithMetaDataLogger.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" spec="beast.base.evolution.TreeWithMetaDataLogger" branchratemodel="@OptimisedRelaxedClock.c:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO" tree="@Tree.t:26052023_WGS_aligned_2022EVD68_JH_PHO_only_PHO"/>
+        </logger>
+        <operatorschedule id="OperatorSchedule" spec="OperatorSchedule"/>
+    </run>
+
+</beast>
