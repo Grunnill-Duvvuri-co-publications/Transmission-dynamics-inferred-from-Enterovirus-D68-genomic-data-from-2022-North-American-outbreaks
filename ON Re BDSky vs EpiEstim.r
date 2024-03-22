@@ -240,13 +240,13 @@ case_and_WGS_dates2 <-(case_and_WGS_dates
 case_and_WGS_dates2_t = t(case_and_WGS_dates2[,-1:-2])
 colnames(case_and_WGS_dates2_t) <- case_and_WGS_dates2$dates
 ticks =barplot(case_and_WGS_dates2_t,  col=c("green","lightblue"),xlab="",
-               ylab='Count', xaxt='n')
+               ylab='Case Counts', xaxt='n')
 abline(h = seq(0,max(case_and_WGS_dates2$I),by=2), col = "grey", lty = "dotted")
 ind <- match(as.Date(date_ticks),case_and_WGS_dates2$dates)
 axis(1, ticks[ind], labels = format(case_and_WGS_dates2$dates[ind], "%b-%d"),las=1)
 legend(x = "topright", text.font = 4, lty=c(1,1), lwd = 2,
        col= c("green","lightblue"),
-       legend=c("Sequenced","Not Sequenced"))
+       legend=c("Sequenced","Unsequenced"))
 title(xlab="Month-Day", mgp=c(2.5,0.75,0), family="Calibri Light",cex.lab=1.2)
 
 
